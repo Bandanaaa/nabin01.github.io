@@ -1,9 +1,3 @@
-/*
- * A Tic Tac Toe game in HTML/JavaScript/CSS.
- *
- * @author: Nabin Koirala
- *
- */
 var N_SIZE = 3,
     EMPTY = "&nbsp;",
 	boxes = [],
@@ -11,7 +5,7 @@ var N_SIZE = 3,
 	score,
 	moves;
 
-  // Initializes the Tic Tac Toe board and starts the game.
+// Initializes the Tic Tac Toe board and starts the game.
 function init() {
 	var board = document.createElement('table');
     board.setAttribute("border", 1);
@@ -31,7 +25,7 @@ function init() {
 			if (i == j) {
 				cell.classList.add('diagonal0');
 			}
-			if (j == N_SIZE - i - 1) {
+            if (j == N_SIZE - i - 1) {
 				cell.classList.add('diagonal1');
 			}
 			cell.identifier = identifier;
@@ -46,9 +40,7 @@ function init() {
 		startNewGame();
 }
 
-/*
- * New game
- */
+// New game
 function startNewGame() {
 	score = {
 		"X": 0,
@@ -61,9 +53,7 @@ function startNewGame() {
 	});
 }
 
-/*
- * Check if a win or not
- */
+// Check if a win or not
 function win(clicked) {
 	// Get all cell classes
 	var memberOf = clicked.className.split(/\s+/);
@@ -85,9 +75,7 @@ function contains(selector, text) {
     });
 }
 
-	/*
-	 * Sets clicked square and also updates the turn.
-	 */
+// Sets clicked square and also updates the turn.
 function set() {
 	if (this.innerHTML !== EMPTY) {
 		return;
@@ -107,4 +95,4 @@ function set() {
 	}
 }
 
-	init();
+init();
