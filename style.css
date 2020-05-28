@@ -346,6 +346,11 @@ li{
     text-align: right;
 }
 
+#contact a{
+    text-decoration: none;
+    color: inherit;
+}
+
 #skills{
     line-height: 1.5;
     color: #111;
